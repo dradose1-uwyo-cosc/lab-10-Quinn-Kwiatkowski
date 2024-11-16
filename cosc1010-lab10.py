@@ -1,12 +1,9 @@
-# Your Name Here
+# Quinn Kwiatkowski
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section: 
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# Submission Date: 11/24/2024
+# Lab 10
+# Lab Section: 14
+# Sources, people worked with, help given to: None
 
 #import modules you will need 
 
