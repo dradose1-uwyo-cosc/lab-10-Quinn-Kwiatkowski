@@ -16,7 +16,9 @@ def get_hash(to_hash):
     # Converts string to 'utf-8'. Hashes with 'sha256' returns the final value in uppercase
     return sha256(to_hash.encode('utf-8')).hexdigest().upper()
 
+# Setting up the function that will be used to crack the password
 def crack_password(hash_file_path, passord_list_path):
+    # 'hash' side
     try:
         # Open the 'hash' file in read mode
         with open(hash_file_path, 'r') as hash_file:
@@ -30,7 +32,7 @@ def crack_password(hash_file_path, passord_list_path):
         # Permissions error
         print(f'Error: unable to read that john')
         return # Exits the program
-    
+    # 'rockyou.txt' side
     try:
         # Open the 'rockyou.txt.' file in read mode, ignoring characers that it can not decode
         with open(passord_list_path, 'r', encoding='utf-8', errors='ignore') as password_file:
@@ -54,11 +56,14 @@ def crack_password(hash_file_path, passord_list_path):
     else: 
         print("Password not found in the forbes 100 list.")
     
-# Runing the function
+# Setting up to run the function
 hash_file_path = 'hash' # Specifies specific path to the 'hash'
 password_list_path = 'rockyou.txt' # Specifies specific path the 'rockyou.txt'
 
+# Runing the function
 crack_password(hash_file_path, password_list_path) 
+
+### Lab Direction ###
 
 # Files and Exceptions
 
